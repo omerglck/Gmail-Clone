@@ -1,0 +1,55 @@
+:root{
+    //! Colors
+    --main-background:#F6F8FC;
+    --hover-effect:#EAEBEF;
+    --search-input:#EAF1FB;
+    --search-input-click:#FFFFFF;
+    --nav-background:#F6F8FC;
+    --create-color:#C2E7FF;
+    --left-clik:#D3E3FD;
+    --mails-background:#FFFFFF;
+    --box-color:#F2F6FC;
+    --icon-size:24px;
+    --active-color:#D3E3FD;
+
+}
+section{
+    display: flex;
+    gap:20px;
+}
+.icon{
+    padding: 3px;
+    border-radius: 50%;
+    transition: all .3s;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    box-sizing: content-box;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--hover-effect);
+        transition:all .3s;
+    }
+    
+}
+// .main-icon{
+//     padding: 3px;
+//     border-radius: 50%;
+//     transition: all .3s;
+//     width: 30px;
+//     height: 30px;
+//     display: grid;
+//     place-items: center;
+//     box-sizing: content-box;
+//     cursor: pointer;
+//     &:hover{
+//         background-color: var(--hover-effect);
+//         transition:all .3s;
+//     }
+// }
+.flex{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

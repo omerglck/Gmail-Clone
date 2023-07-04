@@ -1,0 +1,326 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// Modules
+@import "modules";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "roboto";
+    background-color: var(--nav-background);
+}
+
+
+// Header-Area
+header{
+    @extend .flex;
+    justify-content: space-between;
+    gap:20px;
+    padding: 20px;
+    font-size:21px;
+    .left{
+        display: flex;
+        align-items: center;
+        gap:10px;
+        .hamburger-menu{
+            padding: 5px;
+            font-size: var(--icon-size);
+            @extend .icon
+        }
+        img,
+        span{
+            cursor: pointer;
+        }
+
+    }
+    .middle{
+        width: 100%;
+        form{
+            @extend .flex;
+            justify-content: space-between;
+            background-color: var(--search-input);
+            border-radius: 30px;
+            gap:10px;
+            padding: 6px 10px;
+            max-width: 580px;//!değiştirilecek
+            .search{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:10px;
+                i{
+                    @extend .icon
+                }
+            }
+            .setting{
+                
+                @extend .icon
+            }
+            
+            input{
+                border:none;
+                outline: none;
+                background: transparent;
+                font-size: 18px;
+            }
+        }
+    }
+    .right{
+        @extend .flex;
+        justify-content: space-between;
+        gap:8px;
+        i{
+            @extend .icon;
+            
+        }
+        img{
+            border-radius: 50%;
+            width: 37px;
+            height: 37px;
+            @extend .icon;
+        }
+    }
+}
+// Sub field
+//! left-nav 
+nav{
+   display: flex;
+   flex-direction: column;
+   padding: 13px;
+   gap:25px; 
+   .create{
+        background-color:var(--create-color);
+        border-radius:20px ;
+        padding: 20px;
+        display: flex;
+        gap:12px;
+        cursor:pointer;
+        transition: .3s;
+        &:hover{
+            transition: .3s;
+            box-shadow: 2px 2px 10px gray;
+
+        }
+        
+        
+    }
+    .nav-middle{
+        display: grid;
+        font-size: 16px;
+        .active{
+            font-weight: bolder;
+            background-color:var(--active-color);
+            border-radius: 0px 20px 20px 0;
+            
+        }
+        a{
+            padding: 7px 12px 7px 26px;
+            display: flex;
+            gap:12px;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--hover-effect);
+                border-radius: 0px 20px 20px 0;
+                
+            }
+        }
+
+    }
+    .nav-bottom{
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+//? açılır kapanır nav
+.hide{
+    .create span,
+    .nav-middle a span,
+    .nav-bottom span{
+        display: none;
+    }
+
+}
+//! main-area
+main{
+    background-color: var(--mails-background);
+    border-radius: 8px;
+    flex-grow: 1; //bu özellik ile main alanının kaplayabileceği bütün alanı kaplar
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    .left{
+        display: flex;
+        gap:8px;
+        i{
+            @extend .icon;
+            width: 25px;
+            height: 25px
+        }
+        .checkbox{
+            @extend .flex;
+            padding-left:10px;
+            gap:3px;
+            i,
+            input{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                width: 15px;
+                height: 20px;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+        .passive{
+            color:rgb(174, 174, 174);
+            cursor: default;
+        }
+        i{
+            @extend .icon;
+            width: 25px;
+            height: 25px;
+        }
+        .keyboard{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-left: 5px;
+            padding-right:10px;
+            i{
+                margin-top: 2px;
+                padding: 4px;
+                width: 15px;
+                height: 20px;
+                border-radius: 0;
+            }
+        }
+    }
+    }
+    .mails-area{
+        height:80vh;
+        
+    }
+    // Mail İçeriği
+    .mail{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap:10px;
+        font-size: 16px;
+        background-color: var(--box-color);
+        border-bottom:1px solid rgb(218, 218, 218) ;
+        padding: 10px;
+        &:hover{
+            box-shadow: 2px 2px 10px rgb(223, 223, 223);
+        }
+        
+        .left{
+            @extend .flex;
+            justify-content: start;
+            i{
+                @extend .icon;   
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .right{
+            @extend .flex;
+            justify-content: space-between;
+            font-size: 17px;
+
+            .message-title{
+                font-weight: bold;
+            }
+            .delete{
+                background: none;
+                border: none;
+                outline: none;
+                justify-content:center ;
+                align-items: center;
+                font-size:17px ;
+                width: 25px;
+                height: 25px;
+                // padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                display: none;
+                
+            }
+
+        }
+        // hover olduğunda tarihi gizledik
+        &:hover > .right .message-date{
+            display: none;
+        } 
+        // hover olduğunda iconu ortaya çıkardık
+        &:hover > .right .delete{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover{
+                @extend .icon;
+                padding: 0;
+                width: 25px;
+                height: 25px;
+                
+            }
+            
+        }
+    }   
+    
+}
+//! right-nav
+aside{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 5px;
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    span{//düz çizgi için
+        width: 100%;
+        height: 2px;
+        background: #a4aab0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

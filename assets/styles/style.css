@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --main-background:#F6F8FC;
+  --hover-effect:#EAEBEF;
+  --search-input:#EAF1FB;
+  --search-input-click:#FFFFFF;
+  --nav-background:#F6F8FC;
+  --create-color:#C2E7FF;
+  --left-clik:#D3E3FD;
+  --mails-background:#FFFFFF;
+  --box-color:#F2F6FC;
+  --icon-size:24px;
+  --active-color:#D3E3FD;
+}
+
+section {
+  display: flex;
+  gap: 20px;
+}
+
+.icon, main .mail:hover > .right .delete:hover, main .mail .left i, main .top .right i, main .top .left i, header .right img, header .right i, header .middle form .setting, header .middle form .search i, header .left .hamburger-menu {
+  padding: 3px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.icon:hover, main .mail:hover > .right .delete:hover, main .mail .left i:hover, main .top .right i:hover, main .top .left i:hover, header .right img:hover, header .right i:hover, header .middle form .setting:hover, header .middle form .search i:hover, header .left .hamburger-menu:hover {
+  background-color: var(--hover-effect);
+  transition: all 0.3s;
+}
+
+.flex, main .mail .right, main .mail .left, main .top .left .checkbox, header .right, header .middle form, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  background-color: var(--nav-background);
+}
+
+header {
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  font-size: 21px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .left .hamburger-menu {
+  padding: 5px;
+  font-size: var(--icon-size);
+}
+header .left img,
+header .left span {
+  cursor: pointer;
+}
+header .middle {
+  width: 100%;
+}
+header .middle form {
+  justify-content: space-between;
+  background-color: var(--search-input);
+  border-radius: 30px;
+  gap: 10px;
+  padding: 6px 10px;
+  max-width: 580px;
+}
+header .middle form .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .middle form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+}
+header .right {
+  justify-content: space-between;
+  gap: 8px;
+}
+header .right img {
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  gap: 25px;
+}
+nav .create {
+  background-color: var(--create-color);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav .create:hover {
+  transition: 0.3s;
+  box-shadow: 2px 2px 10px gray;
+}
+nav .nav-middle {
+  display: grid;
+  font-size: 16px;
+}
+nav .nav-middle .active {
+  font-weight: bolder;
+  background-color: var(--active-color);
+  border-radius: 0px 20px 20px 0;
+}
+nav .nav-middle a {
+  padding: 7px 12px 7px 26px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+nav .nav-middle a:hover {
+  background-color: var(--hover-effect);
+  border-radius: 0px 20px 20px 0;
+}
+nav .nav-bottom div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide .create span,
+.hide .nav-middle a span,
+.hide .nav-bottom span {
+  display: none;
+}
+
+main {
+  background-color: var(--mails-background);
+  border-radius: 8px;
+  flex-grow: 1;
+}
+main .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .top .left {
+  display: flex;
+  gap: 8px;
+}
+main .top .left i {
+  width: 25px;
+  height: 25px;
+}
+main .top .left .checkbox {
+  padding-left: 10px;
+  gap: 3px;
+}
+main .top .left .checkbox i,
+main .top .left .checkbox input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  width: 15px;
+  height: 20px;
+}
+main .top .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+main .top .right .passive {
+  color: rgb(174, 174, 174);
+  cursor: default;
+}
+main .top .right i {
+  width: 25px;
+  height: 25px;
+}
+main .top .right .keyboard {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+main .top .right .keyboard i {
+  margin-top: 2px;
+  padding: 4px;
+  width: 15px;
+  height: 20px;
+  border-radius: 0;
+}
+main .mails-area {
+  height: 80vh;
+}
+main .mail {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 10px;
+  font-size: 16px;
+  background-color: var(--box-color);
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding: 10px;
+}
+main .mail:hover {
+  box-shadow: 2px 2px 10px rgb(223, 223, 223);
+}
+main .mail .left {
+  justify-content: start;
+}
+main .mail .left i {
+  width: 20px;
+  height: 20px;
+}
+main .mail .right {
+  justify-content: space-between;
+  font-size: 17px;
+}
+main .mail .right .message-title {
+  font-weight: bold;
+}
+main .mail .right .delete {
+  background: none;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+}
+main .mail:hover > .right .message-date {
+  display: none;
+}
+main .mail:hover > .right .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .mail:hover > .right .delete:hover {
+  padding: 0;
+  width: 25px;
+  height: 25px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px;
+}
+aside .icon, aside header .left .hamburger-menu, header .left aside .hamburger-menu, aside header .middle form .search i, header .middle form .search aside i, aside header .middle form .setting, header .middle form aside .setting, aside header .right i, header .right aside i, aside header .right img, header .right aside img, aside main .top .left i, main .top .left aside i, aside main .top .right i, main .top .right aside i, aside main .mail .left i, main .mail .left aside i, aside main .mail:hover > .right .delete:hover, main .mail:hover > .right aside .delete:hover {
+  width: 30px;
+  height: 30px;
+}
+aside span {
+  width: 100%;
+  height: 2px;
+  background: #a4aab0;
+}/*# sourceMappingURL=style.css.map */
