@@ -102,6 +102,7 @@
                 </div>
             </div>
             <div class="mails-area">
+                
                 <div class="mail">
                     <div class="left">
                         <input type="checkbox">
@@ -117,6 +118,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
         <!--! right-nav  -->
@@ -131,8 +133,24 @@
     </section>
 
 
+    <!--todo Modal Mail Ekleme Ekranı  -->
+    <div class="modal-wrapper">
+        <div class="modal-inner">
+            <i class="bi bi-x-lg" id="close-btn"></i>
 
+            <form id="create-mail-form">
+                <label>Kime</label>
+                <input type="text">
 
+                <label>Konu</label>
+                <input type="text">
+
+                <label>İçerik</label>
+                <textarea></textarea>
+                <button id="send-mail-btn">Gönder</button>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -156,6 +174,6 @@
 
 
     <!-- JS File -->
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

@@ -229,6 +229,7 @@ main .mail:hover {
 }
 main .mail .left {
   justify-content: start;
+  gap: 5px;
 }
 main .mail .left i {
   width: 20px;
@@ -282,4 +283,70 @@ aside span {
   width: 100%;
   height: 2px;
   background: #a4aab0;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.281);
+  display: none;
+  place-items: center;
+}
+
+.modal-inner {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+}
+.modal-inner #close-btn {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.modal-inner form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-inner form label {
+  margin-top: 40px;
+}
+.modal-inner form input, .modal-inner form textarea {
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 8px;
+}
+.modal-inner form textarea {
+  width: 100%;
+  min-height: 250px;
+  max-height: 400px;
+  resize: vertical;
+  padding: 8px;
+}
+.modal-inner #send-mail-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: var(--create-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: box-shadow 0.4s;
+}
+.modal-inner #send-mail-btn:hover {
+  box-shadow: 0 0 10px #46677c;
+  transition: all 0.4s;
 }/*# sourceMappingURL=style.css.map */
